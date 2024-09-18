@@ -1,5 +1,5 @@
+import { createContext, useContext, useEffect, useState } from "react";
 import type { Die, DieResult } from "../types/diceTypes";
-import { createContext, useContext, useState, useEffect } from "react";
 
 type DieContext = {
     dice: Die[];

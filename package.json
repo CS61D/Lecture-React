@@ -8,11 +8,13 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "biome": "bunx biome check --write --unsafe src/*"
+    "biome": "bunx biome check --write --unsafe src/*",
+    "deploy": "serve dist"
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "serve": "^14.2.3"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.1",

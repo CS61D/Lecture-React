@@ -3,8 +3,8 @@ import { useDice } from "../hooks/useDice";
 
 export const DieInput = () => {
     const [nameInput, setNameInput] = useState<string>("Die 1");
-    const [numberInput, setNumberInput] = useState<number>(6);
-    const { handleAdd } = useDice();
+    const [sidesInput, setSidesInput] = useState<number>(6);
+    const { handleAdd, dice } = useDice();
 
     return (
         <div>
@@ -23,19 +23,26 @@ export const DieInput = () => {
                 type="number"
                 placeholder={"20"}
                 min={2}
-                value={numberInput}
-                onChange={(e) => setNumberInput(Number(e.target.value))}
+                value={sidesInput}
+                onChange={(e) => setSidesInput(Number(e.target.value))}
             />
 
             <button
                 onClick={() => {
-                    handleAdd({
-                        sides: numberInput,
-                        name: nameInput,
-                    });
+                    console.log("hello?");
+                    if (
+                        nameInput &&
+                        sidesInput > 2 &&
+                        !dice.some((die) => die.name === nameInput) // Ensures unique names for key rendering
+                    ) {
+                        handleAdd({
+                            sides: sidesInput,
+                            name: nameInput,
+                        });
 
-                    setNumberInput(6);
-                    setNameInput("");
+                        setSidesInput(6);
+                        setNameInput("");
+                    }
                 }}
                 type="button"
             >

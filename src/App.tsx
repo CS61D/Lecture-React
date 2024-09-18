@@ -5,7 +5,7 @@ import { RollResult } from "./components/RollResult";
 import { useDice } from "./hooks/useDice";
 
 function App() {
-    const { results, handleClear, handleRoll } = useDice();
+    const { results, handleClear, handleRoll, dice } = useDice();
 
     const RollCTA = () => {
         if (results.length === 0) {
@@ -15,9 +15,12 @@ function App() {
             return <p>There are {results.length} results</p>;
         }
         return (
-            <button type="button" onClick={() => handleClear()}>
-                Clear
-            </button>
+            <>
+                <p>There are {results.length} results</p>
+                <button type="button" onClick={() => handleClear()}>
+                    Clear
+                </button>
+            </>
         );
     };
 

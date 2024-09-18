@@ -4,7 +4,8 @@ export const DieDisplay = () => {
     const { handleDelete, dice } = useDice();
 
     return dice.map((die, index) => (
-        <div key={die.name}>
+        //! Note using the name as a key only works if dice are required to have unique names
+        <div key={`${die.name}`}>
             <span>
                 Name: {die.name} Sides: {die.sides}
             </span>
