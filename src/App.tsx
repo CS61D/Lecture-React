@@ -5,7 +5,7 @@ import { RollResult } from "./components/RollResult";
 import { useDice } from "./hooks/useDice";
 
 function App() {
-    const { results, handleClear, handleRoll, dice } = useDice();
+    const { results, handleClear, handleRoll } = useDice();
 
     const RollCTA = () => {
         if (results.length === 0) {
