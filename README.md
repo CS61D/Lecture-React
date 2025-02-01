@@ -4,7 +4,7 @@ Completed Dice Roller Application.
 
 **This is not starter code. Lectures 3 and 4 create a new React Project from scratch.**
 
-Deployed live at [https://dice.education.codifyberkeley.org/](https://dice.education.codifyberkeley.org/)
+Deployed live at [https://dice.61d.org/](https://dice.61d.org/)
 
 [Lecture 3](https://www.youtube.com/watch?v=uGYfJfQg0sk)
 
